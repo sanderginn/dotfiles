@@ -55,6 +55,7 @@ brew "wget"
 brew "yq"
 brew "datawire/blackbird/telepresence"
 brew "deviceinsight/packages/kafkactl"
+brew "minikube"
 
 cask "1password"
 cask "1password-cli"
