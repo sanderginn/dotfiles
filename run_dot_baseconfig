@@ -1,6 +1,9 @@
-#!/bin/sh
+#!/bin/zsh
 
 set -e
+
+# Ask for the administrator password upfront
+sudo -v
 
 echo "Installing chezmoi and applying dotfiles ..."
 brew bundle --file=- <<EOF
@@ -23,11 +26,6 @@ if [ -f "$HOME/Brewfile" ]; then
   fi
 fi
 
-if [ -f "$HOME/monokai.terminal" ]; then
-  open ~/monokai.terminal
-  defaults write com.apple.terminal "Default Window Settings" "monokai"
-fi
-
 if [ -f "$HOME/.functions" ]; then
   # shellcheck source=/dev/null
   . "$HOME/.functions"
@@ -38,12 +36,15 @@ if [ -f "$HOME/.aliases" ]; then
   . "$HOME/.aliases"
 fi
 
+if [ -f "$HOME/.zshrc" ]; then
+  # shellcheck source=/dev/null
+  . "$HOME/.zshrc"
+fi
+
 if [ -f "$HOME/.macos_config" ]; then
   # shellcheck source=/dev/null
   . "$HOME/.macos_config"
 fi
 
-if [ -f "$HOME/.zshrc" ]; then
-  # shellcheck source=/dev/null
-  . "$HOME/.zshrc"
-fi
+# Kill terminal to apply changes
+pkill -a Terminal

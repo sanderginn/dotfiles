@@ -594,6 +594,11 @@ defaults write com.apple.terminal SecureKeyboardEntry -bool true
 # Disable the annoying line marks
 defaults write com.apple.Terminal ShowLineMarks -int 0
 
+if [ -f "$HOME/monokai.terminal" ]; then
+	open ~/monokai.terminal
+	defaults write com.apple.terminal "Default Window Settings" "monokai"
+fi
+
 # Install the Solarized Dark theme for iTerm
 # open "${HOME}/init/Solarized Dark.itermcolors"
 
@@ -742,8 +747,7 @@ for app in "Activity Monitor" \
 	"Photos" \
 	"Safari" \
 	"Spectacle" \
-	"SystemUIServer" \
-	"Terminal"; do
+	"SystemUIServer"; do
 	killall "${app}" &> /dev/null
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."

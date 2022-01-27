@@ -83,6 +83,7 @@ cask "transmission"
 cask "viscosity"
 cask "visual-studio-code"
 cask "vlc"
+cask "fig"
 
 mas "Amphetamine", id: 937984704
 mas "Magnet", id: 441258766
