@@ -597,6 +597,7 @@ defaults write com.apple.Terminal ShowLineMarks -int 0
 if [ -f "$HOME/monokai.terminal" ]; then
 	open ~/monokai.terminal
 	defaults write com.apple.terminal "Default Window Settings" "monokai"
+	defaults write com.apple.terminal "Startup Window Settings" "monokai"
 fi
 
 # Install the Solarized Dark theme for iTerm
