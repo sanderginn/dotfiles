@@ -15,7 +15,7 @@ if [ ! -f "$HOME/.config/chezmoi/chezmoi.toml" ]; then
   # chmod 0600 "$HOME/.config/chezmoi/chezmoi.toml"
 fi
 
-echo "Running your customizations from ~/.baseconfig ..."
+echo "Running your customizations..."
 
 if [ -f "$HOME/Brewfile" ]; then
   echo "Installing tools and apps from Brewfile ..."
@@ -28,16 +28,19 @@ fi
 
 if [ -f "$HOME/.functions" ]; then
   # shellcheck source=/dev/null
+  echo "Setting shell functions..."
   . "$HOME/.functions"
 fi
 
 if [ -f "$HOME/.aliases" ]; then
   # shellcheck source=/dev/null
+  echo "Setting shell aliases..."
   . "$HOME/.aliases"
 fi
 
 if [ -f "$HOME/.zshrc" ]; then
   # shellcheck source=/dev/null
+  echo "Setting zsh functions..."
   . "$HOME/.zshrc"
 fi
 
