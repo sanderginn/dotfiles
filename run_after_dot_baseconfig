@@ -46,5 +46,5 @@ if [ -f "$HOME/.macos_config" ]; then
   . "$HOME/.macos_config"
 fi
 
-# Kill terminal to apply changes
-pkill -a Terminal
+# # Kill terminal to apply changes
+# pkill -a Terminal

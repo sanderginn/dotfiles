@@ -115,6 +115,9 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Set clock to 24h
 defaults write com.apple.menuextra.clock DateFormat -string 'EEE MMM d  H:mm'
 
+# Show battery percentage
+defaults write com.apple.controlcenter.plist BatteryShowPercentage -bool true
+
 ###############################################################################
 # SSD-specific tweaks                                                         #
 ###############################################################################
