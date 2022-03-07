@@ -84,6 +84,8 @@ cask "viscosity"
 cask "visual-studio-code"
 cask "vlc"
 cask "fig"
+cask "zoom"
+cask "google-cloud-sdk"
 
 mas "Amphetamine", id: 937984704
 mas "Magnet", id: 441258766
