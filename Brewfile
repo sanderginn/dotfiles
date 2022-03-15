@@ -86,6 +86,7 @@ cask "vlc"
 cask "fig"
 cask "zoom"
 cask "google-cloud-sdk"
+cask "goland"
 
 mas "Amphetamine", id: 937984704
 mas "Magnet", id: 441258766
