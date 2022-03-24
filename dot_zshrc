@@ -1,5 +1,5 @@
 # Add brew to path
-export PATH=/opt/homebrew/bin:$PATH
+export PATH="/opt/homebrew/bin:$PATH"
 
 DEFAULT_USER="sander"
 ZSH_BASE=$HOME/dotfiles
@@ -12,20 +12,24 @@ source ~/.functions
 autoload -U +X compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 source <(kubectl completion zsh)
-source /usr/local/etc/bash_completion.d/az
+source $(brew --prefix)/etc/bash_completion.d/az
 
 # set maven's java version to 8
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
 
 # set Go path
 export PATH=$PATH:$(go env GOPATH)/bin
 
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+  [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # use Sublime as 'kubectl edit' editor
-export KUBE_EDITOR="/usr/local/bin/subl -w"export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
+export KUBE_EDITOR="$(brew --prefix)/bin/subl -w"
+export PATH="$(brew --prefix)/opt/postgresql@11/bin:$PATH"
 
 # autocomplete for gcloud
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
+# add sg to path
+export PATH="$HOME/.sg:$PATH"

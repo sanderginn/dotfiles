@@ -166,8 +166,8 @@ sudo defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool tr
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 25
+sudo defaults write NSGlobalDomain KeyRepeat -int 1
+sudo defaults write NSGlobalDomain InitialKeyRepeat -int 25
 
 # Default F-key functionality
 defaults write -g com.apple.keyboard.fnState -boolean true
@@ -580,8 +580,11 @@ defaults write com.apple.spotlight orderedItems -array \
 	'{"enabled" = 0;"name" = "MENU_WEBSEARCH";}' \
 	'{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
 
+echo "Before"
+
 # Load new settings before rebuilding the index
 sudo killall mds > /dev/null 2>&1
+sleep 5
 # Make sure indexing is enabled for the main volume
 sudo mdutil -i on / > /dev/null
 # Rebuild the index from scratch
@@ -754,22 +757,22 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "Activity Monitor" \
-	"Address Book" \
-	"Calendar" \
-	"cfprefsd" \
-	"Contacts" \
-	"Dock" \
-	"Finder" \
-	"Google Chrome Canary" \
-	"Google Chrome" \
-	"Mail" \
-	"Messages" \
-	"Photos" \
-	"Safari" \
-	"Spectacle" \
-	"SystemUIServer"; do
-	killall -v "${app}" &> /dev/null
-done
+# for app in "Activity Monitor" \
+# 	"Address Book" \
+# 	"Calendar" \
+# 	"cfprefsd" \
+# 	"Contacts" \
+# 	"Dock" \
+# 	"Finder" \
+# 	"Google Chrome Canary" \
+# 	"Google Chrome" \
+# 	"Mail" \
+# 	"Messages" \
+# 	"Photos" \
+# 	"Safari" \
+# 	"Spectacle" \
+# 	"SystemUIServer"; do
+# 	killall -v "${app}" &> /dev/null
+# done
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
