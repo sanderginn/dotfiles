@@ -26,6 +26,21 @@ if [ -f "$HOME/Brewfile" ]; then
   fi
 fi
 
+if [[ $(uname -m) == "arm64" ]]; then
+  # Apple silicon: install Zulu JDK
+  brew bundle --file=- <<EOF
+    tap "mdogan/zulu"
+    cask "zulu-jdk11"
+    cask "zulu-jdk8"
+EOF
+else
+  brew bundle --file=- <<EOF
+    tap "adoptopenjdk/openjdk"
+    cask "adoptopenjdk11"
+    cask "adoptopenjdk8"
+EOF
+fi
+
 if [ -f "$HOME/.functions" ]; then
   # shellcheck source=/dev/null
   . "$HOME/.functions"

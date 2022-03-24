@@ -1,4 +1,3 @@
-tap "adoptopenjdk/openjdk"
 tap "datawire/blackbird"
 tap "deviceinsight/packages"
 tap "homebrew/bundle"
@@ -60,8 +59,6 @@ brew "mercurial"
 
 cask "1password"
 cask "1password-cli"
-cask "adoptopenjdk11"
-cask "adoptopenjdk8"
 cask "datagrip"
 cask "discord"
 cask "docker"
