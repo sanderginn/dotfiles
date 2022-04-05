@@ -580,7 +580,6 @@ defaults write com.apple.spotlight orderedItems -array \
 	'{"enabled" = 0;"name" = "MENU_WEBSEARCH";}' \
 	'{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
 
-echo "Before"
 
 # Load new settings before rebuilding the index
 sudo killall mds > /dev/null 2>&1

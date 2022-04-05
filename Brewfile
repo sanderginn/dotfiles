@@ -59,6 +59,7 @@ brew "wget"
 brew "yq"
 brew "datawire/blackbird/telepresence"
 brew "gh"
+brew "yamllint"
 
 cask "1password"
 cask "1password-cli"
