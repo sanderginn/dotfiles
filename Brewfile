@@ -60,6 +60,7 @@ brew "yq"
 brew "datawire/blackbird/telepresence"
 brew "gh"
 brew "yamllint"
+brew "velero"
 
 cask "1password"
 cask "1password-cli"
