@@ -34,5 +34,8 @@ source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/compl
 # add sg to path
 export PATH="$HOME/.sg:$PATH"
 
+# add gcloud to path
+source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+
 
 . $(brew --prefix asdf)/libexec/asdf.sh
