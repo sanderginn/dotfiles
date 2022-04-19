@@ -70,3 +70,7 @@ function kgacr {
     fi
   done
 }
+
+function gdlb() {
+  git branch -r | egrep -v -f /dev/fd/0  <(git branch -vv | grep origin) | xargs git branch -d
+}
