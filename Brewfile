@@ -66,6 +66,7 @@ brew "velero"
 brew "snyk-iac-rules"
 brew "sourcegraph/src-cli/src-cli"
 brew "deno"
+brew "kustomize"
 
 cask "1password"
 cask "1password-cli"
