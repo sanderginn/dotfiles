@@ -13,10 +13,7 @@ source ~/.functions
 [ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 # Autocomplete
-autoload -U +X compinit && compinit
-autoload -U +X bashcompinit && bashcompinit
 source <(kubectl completion zsh)
-source $(brew --prefix)/etc/bash_completion.d/az
 
 # set maven's java version to 8
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
