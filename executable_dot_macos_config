@@ -719,6 +719,13 @@ defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 ###############################################################################
+# Preview                                                                     #
+###############################################################################
+
+# Show thumbnails by default
+defaults write com.apple.Preview PVPDFSuppressSidebarOnOpening -bool false
+
+###############################################################################
 # Messages                                                                    #
 ###############################################################################
 

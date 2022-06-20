@@ -18,7 +18,7 @@ source <(kubectl completion zsh)
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
 
 # set Go path
-export PATH=$PATH:$(go env GOPATH)/bin
+export PATH=$(go env GOPATH)/bin:$PATH
 export GOBIN=$(go env GOPATH)/bin
 
 export NVM_DIR="$HOME/.nvm"
@@ -38,6 +38,9 @@ export PATH="$HOME/.sg:$PATH"
 # add gcloud to path
 source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 
+
+# set SG 1pass account as base for CLI
+export OP_ACCOUNT=team-sourcegraph.1password.com
 
 . $(brew --prefix asdf)/libexec/asdf.sh
 compinit
