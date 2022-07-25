@@ -44,3 +44,4 @@ export OP_ACCOUNT=team-sourcegraph.1password.com
 
 . $(brew --prefix asdf)/libexec/asdf.sh
 compinit
+PROG=sg source /Users/sander.ginn@sourcegraph.com/.sourcegraph/sg.zsh_autocomplete
