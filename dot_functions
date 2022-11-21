@@ -32,6 +32,10 @@ function kga() {
   kubectl get all "$@"
 }
 
+function kgp() {
+  kubectl get pods "$@"
+}
+
 function kgans() {
   kubectl get all --all-namespaces "$@"
 }
