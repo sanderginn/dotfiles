@@ -83,6 +83,7 @@ brew "robscott/tap/kube-capacity"
 brew "snyk/tap/snyk-iac-rules"
 brew "sourcegraph/src-cli/src-cli"
 brew "ripgrep"
+brew "stern"
 
 cask "1password"
 cask "1password-cli"
