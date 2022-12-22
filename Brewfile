@@ -84,6 +84,7 @@ brew "snyk/tap/snyk-iac-rules"
 brew "sourcegraph/src-cli/src-cli"
 brew "ripgrep"
 brew "stern"
+brew "withgraphite/tap/graphite"
 
 cask "1password"
 cask "1password-cli"
