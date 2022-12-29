@@ -85,6 +85,7 @@ brew "sourcegraph/src-cli/src-cli"
 brew "ripgrep"
 brew "stern"
 brew "withgraphite/tap/graphite"
+brew "cheat"
 
 cask "1password"
 cask "1password-cli"
