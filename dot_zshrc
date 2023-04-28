@@ -27,7 +27,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # use Sublime as 'kubectl edit' editor
 export KUBE_EDITOR="$(brew --prefix)/bin/subl -w"
-export PATH="$(brew --prefix)/opt/postgresql@11/bin:$PATH"
+#export PATH="$(brew --prefix)/opt/postgresql@11/bin:$PATH"
 
 # autocomplete for gcloud
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
