@@ -86,6 +86,7 @@ brew "ripgrep"
 brew "stern"
 brew "withgraphite/tap/graphite"
 brew "cheat"
+brew "noti"
 
 cask "1password"
 cask "1password-cli"
