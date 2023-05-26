@@ -50,6 +50,14 @@ PROG=sg source /Users/sander.ginn@sourcegraph.com/.sourcegraph/sg.zsh_autocomple
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 
+# PG env
+export PGPORT=5432
+export PGHOST=localhost
+export PGUSER=sourcegraph
+export PGPASSWORD=sourcegraph
+export PGDATABASE=sourcegraph
+export PGSSLMODE=disable
+
 # Everything below allows JH to hack me
 
 autoload colors && colors
