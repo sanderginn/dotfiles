@@ -1,4 +1,4 @@
-zstyle :compinstall filename '/Users/sander.ginn@sourcegraph.com/.zshrc'
+zstyle :compinstall filename '/Users/sanderginn/.zshrc'
 autoload -Uz compinit
 compinit
 
@@ -38,25 +38,11 @@ export PATH="$HOME/.sg:$PATH"
 # add gcloud to path
 source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 
-
-# set SG 1pass account as base for CLI
-export OP_ACCOUNT=team-sourcegraph.1password.com
-
 . $(brew --prefix asdf)/libexec/asdf.sh
 compinit
-PROG=sg source /Users/sander.ginn@sourcegraph.com/.sourcegraph/sg.zsh_autocomplete
 
 # kubectl gcloud auth
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
-
-
-# PG env
-export PGPORT=5432
-export PGHOST=localhost
-export PGUSER=sourcegraph
-export PGPASSWORD=sourcegraph
-export PGDATABASE=sourcegraph
-export PGSSLMODE=disable
 
 # Everything below allows JH to hack me
 

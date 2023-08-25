@@ -56,11 +56,6 @@ if [ -f "$HOME/.zshrc" ]; then
   . "$HOME/.zshrc"
 fi
 
-if [ ! -d "$HOME/.sg" ]; then
-  # Install sourcegraph dev tool
-  curl --proto '=https' --tlsv1.2 -sSLf https://install.sg.dev | sh
-fi
-
 if [ -f "$HOME/.macos_config" ]; then
   # shellcheck source=/dev/null
   . "$HOME/.macos_config"
