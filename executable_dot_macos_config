@@ -142,6 +142,7 @@ sudo pmset -a hibernatemode 0
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write com.apple.AppleMultitouchTrackpad Clicking 1
 
 # Trackpad: map bottom right corner to right-click
 # defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
@@ -169,8 +170,16 @@ sudo defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool tr
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
+echo Setting keyboard repeat rate, current value:
+sudo defaults read NSGlobalDomain KeyRepeat
 sudo defaults write NSGlobalDomain KeyRepeat -int 1
+echo New value:
+sudo defaults read NSGlobalDomain KeyRepeat
+echo Setting initial keyboard repeat rate, current value:
+sudo defaults read NSGlobalDomain InitialKeyRepeat
 sudo defaults write NSGlobalDomain InitialKeyRepeat -int 25
+echo New value:
+sudo defaults read NSGlobalDomain InitialKeyRepeat
 
 # Default F-key functionality
 defaults write -g com.apple.keyboard.fnState -boolean true

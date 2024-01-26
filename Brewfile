@@ -87,6 +87,8 @@ brew "stern"
 brew "withgraphite/tap/graphite"
 brew "cheat"
 brew "noti"
+brew "chruby"
+brew "ruby-install"
 
 cask "1password"
 cask "1password-cli"

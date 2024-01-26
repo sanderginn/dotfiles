@@ -32,6 +32,9 @@ export KUBE_EDITOR="$(brew --prefix)/bin/subl -w"
 # autocomplete for gcloud
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
+# enable chruby
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+
 # add sg to path
 export PATH="$HOME/.sg:$PATH"
 
