@@ -89,6 +89,7 @@ brew "cheat"
 brew "noti"
 brew "chruby"
 brew "ruby-install"
+brew "pulumi"
 
 cask "1password"
 cask "1password-cli"
