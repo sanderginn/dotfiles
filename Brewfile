@@ -118,7 +118,7 @@ cask "vlc"
 cask "zoom"
 cask "zulu-jdk11"
 cask "zulu-jdk8"
-cask "dotnet"
+cask "dotnet-sdk"
 
 mas "Amphetamine", id: 937984704
 mas "EasyRes", id: 688211836

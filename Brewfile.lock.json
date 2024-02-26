@@ -3376,6 +3376,12 @@
         "options": {
           "full_name": "dotnet"
         }
+      },
+      "dotnet-sdk": {
+        "version": "8.0.201,ca8378e2-a2b8-4dc9-b54b-206feeff5ec5,22fdb7f35fab91ba799ea05bcae84742",
+        "options": {
+          "full_name": "dotnet-sdk"
+        }
       }
     },
     "mas": {
