@@ -9,6 +9,7 @@ tap "robscott/tap"
 tap "snyk/tap"
 tap "sourcegraph/src-cli"
 tap "mdogan/zulu"
+tap "pulumi/tap"
 
 brew "argocd"
 brew "coreutils"
@@ -98,7 +99,6 @@ cask "firefox"
 cask "goland"
 cask "google-cloud-sdk"
 cask "google-drive"
-cask "google-drive-file-stream"
 cask "insomnia"
 cask "intellij-idea-ce"
 cask "macdown"
@@ -117,6 +117,7 @@ cask "vlc"
 cask "zoom"
 cask "zulu-jdk11"
 cask "zulu-jdk8"
+brew "pulumictl"
 
 mas "Amphetamine", id: 937984704
 mas "EasyRes", id: 688211836
