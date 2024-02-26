@@ -89,6 +89,7 @@ brew "noti"
 brew "chruby"
 brew "ruby-install"
 brew "pulumi"
+brew "pulumictl"
 
 cask "1password"
 cask "1password-cli"
@@ -117,7 +118,7 @@ cask "vlc"
 cask "zoom"
 cask "zulu-jdk11"
 cask "zulu-jdk8"
-brew "pulumictl"
+cask "dotnet"
 
 mas "Amphetamine", id: 937984704
 mas "EasyRes", id: 688211836

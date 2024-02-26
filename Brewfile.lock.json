@@ -3370,6 +3370,12 @@
         "options": {
           "full_name": "zulu-jdk8"
         }
+      },
+      "dotnet": {
+        "version": "8.0.2,4e5292ef-8f26-4ead-9632-03243fd4f907,761efaa7a63c52d69e6ef085b338ff41",
+        "options": {
+          "full_name": "dotnet"
+        }
       }
     },
     "mas": {
