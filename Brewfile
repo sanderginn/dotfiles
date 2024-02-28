@@ -90,6 +90,7 @@ brew "chruby"
 brew "ruby-install"
 brew "pulumi"
 brew "pulumictl"
+brew "yarn"
 
 cask "1password"
 cask "1password-cli"
