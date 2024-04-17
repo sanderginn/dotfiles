@@ -120,6 +120,7 @@ cask "zoom"
 cask "zulu-jdk11"
 cask "zulu-jdk8"
 cask "dotnet-sdk"
+cask "ngrok"
 
 mas "Amphetamine", id: 937984704
 mas "EasyRes", id: 688211836
