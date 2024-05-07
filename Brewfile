@@ -91,6 +91,7 @@ brew "ruby-install"
 brew "pulumi"
 brew "pulumictl"
 brew "yarn"
+brew "pyenv"
 
 cask "1password"
 cask "1password-cli"
