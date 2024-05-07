@@ -54,6 +54,7 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # Everything below allows JH to hack me
 

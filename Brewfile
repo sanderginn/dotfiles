@@ -92,6 +92,7 @@ brew "pulumi"
 brew "pulumictl"
 brew "yarn"
 brew "pyenv"
+brew "pyenv-virtualenv"
 
 cask "1password"
 cask "1password-cli"
