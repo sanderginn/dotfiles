@@ -5,8 +5,12 @@
 2. Install 1password-cli and login:  
 ```
 brew install --cask 1password-cli
-op signin my.1password.com <username>
+eval $(op signin --account my.1password.com)
 ```
+
+3. Manually apply these settings or the mac config script won't terminate successfully (in Sequoia):
+  - Set keyboard repeat/initial keyboard repeat to some value
+  - Enable full disk access for terminal
 
 3. Install and run chezmoi:  
 `sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply sanderginn`
