@@ -91,6 +91,5 @@ function kube_ps1()
 }
 
 function buildkite-local-agent() {
-  BUILDKITE_AGENT_TOKEN=$(op item get Buildkite --fields label="Local build agent token" --format json  | jq -r '.value')
-  buildkite-agent start --queue local-agents
+  BUILDKITE_AGENT_TOKEN=$(op item get Buildkite --fields label="Local build agent token" --format json  | jq -r '.value') buildkite-agent start --queue local-agents
 }

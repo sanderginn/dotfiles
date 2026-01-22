@@ -152,3 +152,9 @@ compdef _gt_yargs_completions gt
 ###-end-gt-completions-###
 
 export PATH="/opt/homebrew/sbin:$PATH"
+
+# Amp CLI
+export PATH="/Users/sanderginn/.amp/bin:$PATH"
+
+# Created by `pipx` on 2026-01-21 21:19:29
+export PATH="$PATH:/Users/sanderginn/.local/bin"
