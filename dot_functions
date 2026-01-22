@@ -91,5 +91,13 @@ function kube_ps1()
 }
 
 function buildkite-local-agent() {
-  BUILDKITE_AGENT_TOKEN=$(op item get Buildkite --fields label="Local build agent token" --format json  | jq -r '.value') buildkite-agent start --queue local-agents
+  local build_dir
+  build_dir="$(mktemp -d -t buildkite-builds.XXXXXX)"
+
+  cleanup() { rm -rf "$build_dir"; }
+  trap cleanup EXIT INT TERM
+
+  BUILDKITE_AGENT_TOKEN=$(
+    op item get Buildkite --fields label="Local build agent token" --format json | jq -r '.value'
+  ) buildkite-agent start --queue local-agents --build-path "$build_dir"
 }
