@@ -91,8 +91,15 @@ function kube_ps1()
 }
 
 function buildkite-local-agent() {
-  local build_dir
-  build_dir="$(mktemp -d -t buildkite-builds.XXXXXX)"
+  local base_dir="/opt/homebrew/var/buildkite-agent/builds"
+
+  local ts pid rand build_dir
+  ts="$(date +%Y%m%d-%H%M%S)"
+  pid="$$"
+  rand="$(LC_ALL=C tr -dc 'a-z0-9' </dev/urandom | head -c 6)"
+
+  build_dir="${base_dir}/agent-${ts}-${pid}-${rand}"
+  mkdir -p "$build_dir"
 
   cleanup() { rm -rf "$build_dir"; }
   trap cleanup EXIT INT TERM
